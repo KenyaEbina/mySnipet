@@ -1,0 +1,113 @@
+@charset "utf-8";
+* {
+	backface-visibility: hidden;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #000;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar {
+	width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #f5f5f5;
+}
+
+
+/*全体のフォント指定*/
+html {
+    overflow-y: scroll;
+    font-size:62.5%;
+    padding:0;
+    margin:0;
+    width:100%;
+}
+
+
+body {
+    position:relative;
+	font-weight: 400;
+    font-size: 1.4rem;
+	line-height: 1.6;
+	background: #fff;
+    color:#333;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    width:100%;
+    height:100%;
+    margin:auto;
+	text-rendering: optimizeLegibility;
+    font-kerning: normal;               
+    font-variant-ligatures: common-ligatures contextual;
+	 font-feature-settings: "palt";
+}
+main{
+	*{
+		color:#32331E;
+	}
+}
+body{
+	*{
+		font-family:'Hanken Grotesk', Arial, Helvetica,"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+	}
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+
+header{
+	.humbergerArea{
+		width:60px;
+		height:60px;
+		position: fixed;
+		top:30px;
+		right: 30px;
+		background:rgba(255,255,255,.6);
+		backdrop-filter:blur(10px);
+		-webkit-backdrop-filter:blur(10px);
+		z-index: 999;
+		border-radius: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0px 0px 15px -5px rgba(#000,.4);
+		cursor: pointer;
+		transition:.2s ease-in 0s;
+		&.is-active{
+			width:300px;
+			height: 580px;
+			border-radius: 6px;
+		}
+		.humbergerBtn{
+			margin-top: 8px;
+			.line{
+				display: flex;
+				gap:3px 0;
+				flex-wrap: wrap;
+				margin-bottom: 3px;
+				span{
+					width:100%;
+					height:2px;
+					background:#000;
+				}
+			}
+			p{
+				font-size:12px;
+				text-align: center;
+				width:100%;
+			}
+		}
+		nav{
+			position: absolute;
+			left:0;
+			top:0;
+			z-index: 999;
+			opacity: 0;
+		}
+	}
+}
